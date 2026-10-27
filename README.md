@@ -29,3 +29,47 @@
 ![anonyStick](design-patterns.png)
 
 <https://refactoring.guru/design-patterns/behavioral-patterns>
+
+---
+
+## 23 GoF Design Patterns — Trạng thái triển khai
+
+### Creational (5 patterns)
+
+| # | Pattern | Trạng thái |
+|---|---------|-----------|
+| 1 | Singleton | ✓ |
+| 2 | Factory Method | ✓ |
+| 3 | Abstract Factory | ✓ |
+| 4 | Prototype | ✓ |
+| 5 | Builder | ✓ |
+
+### Structural (7 patterns)
+
+| # | Pattern | Trạng thái |
+|---|---------|-----------|
+| 6 | Adapter | ✓ |
+| 7 | Bridge | ✗ |
+| 8 | Composite | ✗ |
+| 9 | Decorator | ✗ |
+| 10 | Facade | ✓ |
+| 11 | Flyweight | ✗ |
+| 12 | Proxy | ✓ |
+
+### Behavioral (11 patterns)
+
+| # | Pattern | Trạng thái |
+|---|---------|-----------|
+| 13 | Chain of Responsibility | ✗ |
+| 14 | Command | ✗ |
+| 15 | Interpreter | ✗ |
+| 16 | Iterator | ✓ |
+| 17 | Mediator | ✗ |
+| 18 | Memento | ✗ |
+| 19 | Observer | ✓ |
+| 20 | State | ✗ |
+| 21 | Strategy | ✓ |
+| 22 | Template Method | ✗ |
+| 23 | Visitor | ✗ |
+
+**Tổng kết:** ✓ 12 / ✗ 11 — Cần bổ sung 11 patterns còn thiếu.

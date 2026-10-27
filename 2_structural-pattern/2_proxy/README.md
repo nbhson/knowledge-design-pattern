@@ -194,3 +194,25 @@ const personProxy = new Proxy(person, {
 ```
 
 <https://dev.to/devishraq/understanding-javascript-proxies-harnessing-the-power-of-metaprogramming-1l4d>
+
+---
+
+## Proxy trong thực tế 2026 — Vue 3 Reactivity
+
+Vue 3 sử dụng Proxy (thay vì Object.defineProperty như Vue 2) để implement reactivity:
+
+```javascript
+const handlers = {
+  get(target, key) {
+    track(target, key)      // thu thập dependency
+    return Reflect.get(target, key)
+  },
+  set(target, key, value) {
+    trigger(target, key)    // thông báo cho các effect
+    return Reflect.set(target, key, value)
+  }
+}
+// Proxy là nền tảng reactivity system của mọi framework JS hiện đại
+```
+
+Ref: https://v3.vuejs.org/guide/reactivity.html

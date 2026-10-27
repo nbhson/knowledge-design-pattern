@@ -9,6 +9,7 @@ const proxyHandler = {
     } else {
       console.log(`The value of ${prop} is ${obj[prop]}`);
     }
+    return obj[prop];
   },
   set: (obj, prop, value) => {
     if (prop === "age" && typeof value !== "number") {

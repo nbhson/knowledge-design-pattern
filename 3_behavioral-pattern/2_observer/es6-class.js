@@ -22,6 +22,9 @@ class Subject {
   notify(location) {
     this.observerList.forEach((observer) => observer.update(location));
   }
+  removeObserver(observer) {
+    this.observerList = this.observerList.filter((obs) => obs !== observer);
+  }
 }
 
 const subject = new Subject();

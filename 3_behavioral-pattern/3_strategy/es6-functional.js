@@ -30,16 +30,21 @@ function defaultPrice(originalPrice) {
 // }
 
 // Nhưng nếu như ở video trước học về IF ELSE thì chúng ta không nên làm như vậy, thay vò sử dung if thì chúng ta nên sử dụng strategy parrtenr ở đây?
-const getPriceStrategies = {
+const getPriceStrategies = Object.freeze({
     preOrder: preOrderPrice,
     promotion: promotionPrice,
     blackFriday: blackFridayPrice,
+    standard: defaultPrice,
     default: defaultPrice,
-}
+})
 
 // Kết hợp trạng thái với chiến lược chiết khấu, hàm giá có thể được tối ưu hóa như sau:
 function getPrice(originalPrice, typePromotion) {
-    return getPriceStrategies[typePromotion](originalPrice);
+    const promotionStrategy =
+        getPriceStrategies[typePromotion] ||
+        getPriceStrategies.default ||
+        getPriceStrategies.standard;
+    return promotionStrategy(originalPrice);
 }
 
 console.log('-->>>', getPrice(200, 'blackFriday'))
